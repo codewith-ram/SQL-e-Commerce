@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ecommerce-fastapi
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"
+      - key: DATABASE_PATH
+        value: /data/app.db
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1

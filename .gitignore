@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.env
+.env.*
+
+# SQLite DB
+*.db
+/data/
+
+# Node
+node_modules/
+
+# Build artifacts
+/dist/
+/build/
+
+# IDE/editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
